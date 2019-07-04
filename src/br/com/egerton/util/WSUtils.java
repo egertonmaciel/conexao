@@ -63,7 +63,7 @@
 //
 //        URL url = new URL("https://130.10.0.44:8090/WSAuthCan/servidor/autenticar");
 //        HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
-//        con.setRequestProperty("Authorization", "Basic cGxhdGFmb3JtYW1vYmlsZToyYzgyNmMxMC0wMWJiLTQwNDMtYjI1Yi01OTE4MmM1NjVmNzk=");
+//        con.setRequestProperty("Authorization", "Basic cGxhdGFmb3JadsfYmlsZToyYasdfadjI1Yi01OTE4MmM1NjVmNzk=");
 //        con.setRequestProperty("Content-Type", "application/json");
 //        con.setDoOutput(true);
 //        con.setDoInput(true);

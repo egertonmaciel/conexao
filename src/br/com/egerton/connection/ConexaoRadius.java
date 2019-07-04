@@ -12,7 +12,7 @@ public class ConexaoRadius extends Conexao {
     public ConexaoRadius() {
         USUARIO = "remoto";
         SENHA = "";
-        URL = "jdbc:mysql://130.10.0.105:3306/Syslog";
+        URL = "jdbc:mysql://IPSERVIDOR:3306/Syslog";
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {

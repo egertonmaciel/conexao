@@ -12,7 +12,7 @@ public class ConexaoDB2DBA extends Conexao {
     public ConexaoDB2DBA() {
         USUARIO = "db2dba";
         SENHA = "";
-        URL = "jdbc:db2://130.10.0.68:50000/BDPROD";
+        URL = "jdbc:db2://IPSERVIDOR:50000/BDPROD";
         try {
             Class.forName("com.ibm.db2.jcc.DB2Driver");
         } catch (ClassNotFoundException ex) {
