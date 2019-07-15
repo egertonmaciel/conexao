@@ -32,7 +32,7 @@ public abstract class Conexao {
     public RetornoSQL select(String sql, Object parametro) {
         return execute(false, sql, Arrays.asList(new Object[]{parametro}));
     }
-    
+
     public RetornoSQL select(String sql, List<Object> parametros) {
         return execute(false, sql, parametros);
     }
@@ -44,7 +44,7 @@ public abstract class Conexao {
     public RetornoSQL update(String sql, Object parametro) {
         return execute(true, sql, Arrays.asList(new Object[]{parametro}));
     }
-    
+
     public RetornoSQL update(String sql, List<Object> parametros) {
         return execute(true, sql, parametros);
     }
@@ -90,9 +90,12 @@ public abstract class Conexao {
                 rs = ps.executeQuery();
             }
 
-            for (int y = 1; y <= rs.getMetaData().getColumnCount(); y++) {
-                retorno.addRotulo(rs.getMetaData().getColumnLabel(y));
+            if (rs.getMetaData() != null) {
+                for (int y = 1; y <= rs.getMetaData().getColumnCount(); y++) {
+                    retorno.addRotulo(rs.getMetaData().getColumnLabel(y));
+                }
             }
+            
             while (rs.next()) {
                 ArrayList<String> registro = new ArrayList<>();
                 for (int y = 1; y <= rs.getMetaData().getColumnCount(); y++) {

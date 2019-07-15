@@ -33,11 +33,11 @@ public class CSVUtils {
         }
         return csv;
     }
-    
+
     public static String gerar(List<List<String>> lista) {
         return gerar(lista, "", "");
     }
-    
+
     public static String gerar(List<List<String>> lista, String separador, String qualificador) {
         String csv = "";
 
